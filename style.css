@@ -23,7 +23,8 @@ body {
 main {
   background: url(images/Mobile.png);
   width: 375px;
-  height: 812px; 
+  height: 680px;
+  border-radius: 15px; 
 }
 
 .container {
