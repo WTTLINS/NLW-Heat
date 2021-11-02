@@ -4,7 +4,8 @@
   margin: 0;
 }
 
-html, body {
+html,
+body {
   --black: hsl(240, 6%, 13%);
   --gray: hsl(240, 9%, 89%);
 
@@ -17,14 +18,13 @@ html, body {
 body {
   display: grid;
   place-items: center; /* intens centralizados/ao meio */
-
 }
 
 main {
   background: url(images/Mobile.png);
   width: 375px;
   height: 680px;
-  border-radius: 15px; 
+  border-radius: 15px;
 }
 
 .container {
@@ -34,18 +34,20 @@ main {
 }
 
 .avatar {
-  width: 10rem; /* o "rem" tem uma relação com o pixel "px" padrão da página, a fonte padrão do navegador eé de 16px, e então 1rem é equivalente a 16px (ou seja, os 160px do wuidht vc divide pela pixel padrão que ´da 10rem ) (160 / 16 = 10rem) também deve ser feito pela largura Height de 184 /16 = 11,5rem, margin padding e etc..*/ 
+  width: 10rem; /* o "rem" tem uma relação com o pixel "px" padrão da página, a fonte padrão do navegador eé de 16px, e então 1rem é equivalente a 16px (ou seja, os 160px do wuidht vc divide pela pixel padrão que ´da 10rem ) (160 / 16 = 10rem) também deve ser feito pela largura Height de 184 /16 = 11,5rem, margin padding e etc..*/
   margin: 11.5rem auto 0;
   position: relative; /* é o limite para o absolute */
 }
 
-.avatar span { /* procura o span dentro do avatar */
+.avatar span {
+  /* procura o span dentro do avatar */
   position: absolute; /* permitie criar níveis de empilhamento (um elemento sobre o outro) é absoluto na página inteira e libera propriedade top: sendo assim o .avatar precisa receber a propriedade position:relative;*/
   top: -15px;
   z-index: 1; /* trabalha o posicionamento do eixo z "profundidade em 3ª dimensão, tem o eixo x=horizontal e y=vertical */
 }
 
-.avatar > img { /* o sinal de > pega o primeiro nível da tag img de baixo para cima */
+.avatar > img {
+  /* o sinal de > pega o primeiro nível da tag img de baixo para cima */
   width: 10rem;
   height: 11.5rem;
   object-fit: cover; /* faz com que a imagem se adapte dentro do width e higth e ela se adapta cobrindo "cover" todo o espaço que estiver ali */
@@ -60,7 +62,7 @@ h1 {
 a {
   color: var(--gray);
   text-decoration: none;
-  margin-top: 0.25rem ;
+  margin-top: 0.25rem;
   display: flex;
   gap: 0.75rem;
   justify-content: center; /* faz o alinhamento central entre os elementos */
@@ -76,6 +78,6 @@ ul {
   padding: 0;
   display: flex; /* faz com que os elementos fiquem um ao lado do outro no eixo x=horizontal "main" principal*/
   /* flex-direction: column; muda o eixo do flex direcionando para colunas */
-  gap: 0.5rem;  /* espaçamento entre os elementos, liberado através do flex e grid */
+  gap: 0.5rem; /* espaçamento entre os elementos, liberado através do flex e grid */
   justify-content: center; /* faz o alinhamento central entre os elementos */
 }
