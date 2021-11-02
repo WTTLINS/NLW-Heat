@@ -42,8 +42,15 @@ main {
 .avatar span {
   /* procura o span dentro do avatar */
   position: absolute; /* permitie criar níveis de empilhamento (um elemento sobre o outro) é absoluto na página inteira e libera propriedade top: sendo assim o .avatar precisa receber a propriedade position:relative;*/
+  animation: spin 10s linear infinite;
   top: -15px;
   z-index: 1; /* trabalha o posicionamento do eixo z "profundidade em 3ª dimensão, tem o eixo x=horizontal e y=vertical */
+}
+
+@keyframes spin {
+  to {
+    transform: rotate(360deg);
+  }
 }
 
 .avatar > img {
